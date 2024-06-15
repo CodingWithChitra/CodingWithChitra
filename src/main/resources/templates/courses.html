@@ -1,0 +1,17 @@
+<!-- courses.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Courses</title>
+</head>
+<body>
+    <h1>Courses</h1>
+    <ul>
+        <li th:each="course : ${courses}">
+            <span th:text="${course.title}">Course Title</span> - 
+            <span th:text="${course.description}">Course Description</span>
+        </li>
+    </ul>
+    <a href="/course/new">Add New Course</a>
+</body>
+</html>
